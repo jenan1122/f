@@ -1,0 +1,21 @@
+{% extends "p/layout.html" %}
+
+   {% block body %}
+
+    <h1>viwe grads</h1>
+<ul>
+    {% for student in students %}
+    <li>
+{{ student.name }} -
+            {{ student.grade }} -
+            {{ student.g }}
+    </li>
+    {% empty %}
+    <li> no student yet</li>
+    {% endfor %}
+
+</ul>
+
+<a href ="{% url 'p:add' %}"> add student </a>
+
+{% endblock %}
